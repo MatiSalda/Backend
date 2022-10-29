@@ -1,0 +1,20 @@
+[
+  {
+    "nombre": "Mouse Logitech",
+    "precio": 300,
+    "foto": "foto1",
+    "id": 1
+  },
+  {
+    "nombre": "Teclado RedDragon",
+    "precio": 200,
+    "foto": "foto2",
+    "id": 2
+  },
+  {
+    "nombre": "Microfono HyperX",
+    "precio": 2500,
+    "foto": "foto3",
+    "id": 3
+  }
+]
