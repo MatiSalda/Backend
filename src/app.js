@@ -26,13 +26,8 @@ app.get('/productos', (req, res) => {
     res.send(returnProducts('./productos.json'))
 })
 
-app.get('productoRandom', (req,res) => {
-    let products = returnProducts('./productos.json')
-    let numRandom = parseInt(Math.random() * products.length)
-    if (!products.status) {
-        response.send(products[numRandom])
-    } else {
-        response.send(products)
-    }
-
+app.get('/productoRandom', (req,res) => {
+    let productos = returnProducts('./productos.json')
+    let numRandom = parseInt(Math.random() * productos.length)
+    res.send(productos[numRandom])
 })
