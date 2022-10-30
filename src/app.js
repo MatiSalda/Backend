@@ -28,6 +28,6 @@ app.get('/productos', (req, res) => {
 
 app.get('/productoRandom', (req,res) => {
     let productos = returnProducts('./productos.json')
-    let numRandom = parseInt(Math.random() * productos.length)
-    res.send(productos[numRandom])
+    let numeroRandom = parseInt(Math.random() * productos.length)
+    res.send(productos[numeroRandom])
 })
