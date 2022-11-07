@@ -1,6 +1,7 @@
 import fs from 'fs'
+import __dirname from './utils.js'
 
-const pathTofile="./productos.json"
+const pathTofile= __dirname+"./productos.json"
 
 
 class Contenedor {
@@ -146,6 +147,5 @@ class Contenedor {
     }
 }
 
-// module.exports=Contenedor
 
 export default Contenedor
