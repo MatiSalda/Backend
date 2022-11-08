@@ -1,23 +1,24 @@
-import {Router} from 'express'
-import Contenedor from '../contenedor.js'
+import {request, Router} from 'express'
+import Contenedor from "../Contenedor/contenedor.js"
 
 const router = Router()
 const contenedor = new Contenedor
 
-router.get('/', (req,res)=>{
-   
-    res.send(contenedor.getAll())
+router.get('/', async (req,res)=>{
+   let all =  await contenedor.getAll()
+    res.send(all)
 })
 
-router.get('/:id', (req,res)=>{
-    const id = request.params.id
-    res.send(contenedor.getById(id))
+router.get('/:id', async (req,res)=>{
+    const id = req.params.id
+    let getId = await contenedor.getById(id)
+    res.send(getId)
 })
 
 router.delete('/:id',  (req, res) => {
-    const id = request.params.id
+    const id = req.params.id
     
-    response.send(contenedor.deleteById(id))
+    res.send(contenedor.deleteById(id))
 })
 
 export default router

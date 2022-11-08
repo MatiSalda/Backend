@@ -1,7 +1,7 @@
 import fs from 'fs'
-import __dirname from './utils.js'
+import __dirname from "../utils.js"
 
-const pathTofile= __dirname+"./productos.json"
+const pathTofile= __dirname + "/files/productos.json"
 
 
 class Contenedor {

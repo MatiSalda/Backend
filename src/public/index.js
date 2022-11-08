@@ -1,6 +1,6 @@
-const form = document.getElementById("formProductos")
+let form = document.getElementById("formProductos")
 
-// form.addEventListener('submit', e=> {
-// e.preventDefault()
+form.addEventListener('submit', e=> {
+e.preventDefault()
 
-// })
+})
