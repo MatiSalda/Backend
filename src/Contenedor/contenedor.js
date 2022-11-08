@@ -6,7 +6,7 @@ const pathTofile= __dirname + "/files/productos.json"
 
 class Contenedor {
     save= async(producto) => {
-        if(!producto.nombre || !producto.precio || !producto.foto){
+        if(!producto.nombre || !producto.precio ){
             return{
                 status: "error",
                 message: "Campos requeridos incompletos"
@@ -144,6 +144,46 @@ class Contenedor {
             }
         }
 
+    }
+
+    actualizarProducto = async (object, id) => {
+        if (!id) {
+            return {
+                status: "Error",
+                message: "ID is required"
+            }
+        }
+        let products = await this.getAll()
+        try {
+            let arrayProductos = products.productos.map(product => {
+                if (product.id == id) {
+                    return {
+                        nombre: object.nombre ? object.nombre : product.nombre,
+                        precio: object.precio ? object.precio : product.precio,
+                        imagen: object.imagen ? object.imagen : product.imagen,
+                        id: product.id
+                    }
+                } else {
+                    return product
+                }
+            })
+            let productUpdate = arrayProductos.find(product => product.id == id)
+            if (productUpdate) {
+                await fs.promises.writeFile(pathTofile, JSON.stringify(arrayProductos, null, 2))
+                return {
+                    status: "success",
+                    message: "successfully upgraded product",
+                    productNew: productUpdate
+                }
+            } else {
+                return {
+                    status: "error",
+                    message: "Product not found"
+                }
+            }
+        } catch {
+            return products
+        }
     }
 }
 
