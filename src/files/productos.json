@@ -15,5 +15,17 @@
     "precio": 2500,
     "foto": "foto3",
     "id": 3
+  },
+  {
+    "nombre": "Monitor LG",
+    "precio": "300",
+    "imagen": "",
+    "id": 4
+  },
+  {
+    "nombre": "Monitor LG",
+    "precio": "300",
+    "imagen": "http://localhost:8080/images/1667949546516-tienda.png",
+    "id": 5
   }
 ]
