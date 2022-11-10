@@ -5,9 +5,19 @@ import uploader from '../servicios/upload.js'
 const router = Router()
 const contenedor = new Contenedor
 
-router.get('/', async (req,res)=>{
+router.get('/productos', async (req,res)=>{
    let all =  await contenedor.getAll()
-    res.send(all)
+       if (all.productos.length != 0) {
+        res.render('home.handlebars', {        
+            all
+        })
+    } else {
+        res.render('home.handlebars', {        
+            productos : {
+                mensaje: "No se encontraron productos :c"
+            }
+        })
+    }
 })
 
 router.get('/:id', async (req,res)=>{
@@ -20,7 +30,7 @@ router.get('/:id', async (req,res)=>{
 router.post('/', uploader.single('imagen'), async (req,res)=>{
     let image = ""
     if (req.file) {
-        image = req.protocol + "://" + req.hostname + ":8080/images/" + req.file.filename
+        image = "imagen/"+ req.file.filename
     }
     let producto = req.body;
     if ((producto.nombre && producto.precio) != '') {
@@ -45,5 +55,6 @@ router.delete('/:id',  (req, res) => {
     
     res.send(contenedor.deleteById(id))
 })
+
 
 export default router

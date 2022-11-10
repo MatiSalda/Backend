@@ -1,31 +1,8 @@
 [
   {
-    "nombre": "Teclado T-Bora",
-    "precio": 300,
+    "nombre": "Monitor LG",
+    "precio": "300",
+    "imagen": "imagen/1668121865820-2.jpg",
     "id": 1
-  },
-  {
-    "nombre": "Teclado RedDragon",
-    "precio": 200,
-    "foto": "foto2",
-    "id": 2
-  },
-  {
-    "nombre": "Microfono HyperX",
-    "precio": 2500,
-    "foto": "foto3",
-    "id": 3
-  },
-  {
-    "nombre": "Monitor LG",
-    "precio": "300",
-    "imagen": "",
-    "id": 4
-  },
-  {
-    "nombre": "Monitor LG",
-    "precio": "300",
-    "imagen": "http://localhost:8080/images/1667949546516-tienda.png",
-    "id": 5
   }
 ]
