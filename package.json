@@ -15,5 +15,14 @@
   },
   "author": "",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MatiSalda/Backend.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/MatiSalda/Backend/issues"
+  },
+  "homepage": "https://github.com/MatiSalda/Backend#readme",
   "description": ""
 }
