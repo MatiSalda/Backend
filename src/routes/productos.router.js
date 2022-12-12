@@ -56,5 +56,8 @@ router.delete('/:id',  (req, res) => {
     res.send(contenedor.deleteById(id))
 })
 
+// router.get('/', (req,res)=>{
+//     res.render('chat.handlebars')
+// })
 
 export default router

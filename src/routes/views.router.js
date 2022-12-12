@@ -1,4 +1,9 @@
 import { Router } from "express";
-const router = Router
 
-export default router
+const viewsRouter = Router()
+
+viewsRouter.get('/', (req,res) =>{
+    res.render('chat.handlebars')
+})
+
+export default viewsRouter

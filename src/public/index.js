@@ -8,3 +8,4 @@ fetch('/productos',{
     body:formData,
 }).then(result => result.json()).then(json=>console.log(json))
 })
+
